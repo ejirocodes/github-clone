@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/styles.reset.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>GitHub Profile &vert; Ejiro Asiuwhu (ejirocodes)</title>
+    <link rel="shortcut icon" href="./assets/icons/gh-icon.svg" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="container">
+                <div class="nav-content">
+                    <i class="fas fa-bars hide-desktop menu-bar"></i>
+                    <div class="nav-items">
+                        <a class="nav-link" href="#">
+                            <img class="git-logo" src="./assets/icons/gh-icon.svg" alt="Github logo" />
+                        </a>
+
+                        <label class="header-search-wrapper form-control d-flex hide-mobile"><input
+                                class="nav-input-field form-control" type="text" placeholder="Search or jump to..." />
+                            <img src="https://github.githubassets.com/images/search-key-slash.svg"
+                                class="mr-2 input-slash" alt="" />
+                        </label>
+
+                        <ul class="nav-links hide-mobile">
+                            <li class="nav-link">
+                                <a href="#">Pull requests</a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="#">Issues</a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="#">Marketplace</a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="#">Explore</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-items">
+                        <div class="noti-wrapper">
+                            <div class="dot"></div>
+                            <img class="bell-svg" src="./assets/icons/bell.svg" alt="bell icon" />
+                        </div>
+                        <button class="hide-mobile">
+                            <img src="./assets/icons/plus.svg" alt="plus icon" />
+                            <img src="./assets/icons/caret-down.svg" alt="dropdown icon" />
+                        </button>
+                        <button class="hide-mobile">
+                            <div class="nav-user-logo-wrapper">
+                                <img id="navAvatar"
+                                    src="https://avatars.githubusercontent.com/u/45228014?s=200&u=c99ed6a00b8346b100d6d69d7f00b5ad1c34f0c1&v=4"
+                                    alt="profile-logo" class="profile-nav-logo" />
+                            </div>
+
+                            <img src="./assets/icons/caret-down.svg" alt="dropdown icon" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="nav-spacer hide-mobile"></div>
+    </header>
+    <div class="tabs-nav-wrapper hide-mobile">
+        <div class="container">
+            <nav class="tabs-nav">
+                <div class="left-menu hide-mobile"></div>
+                <div class="main-tabs">
+                    <button class="main-tab-item">
+                        <img src="./assets/icons/overview.svg" alt="overview icon" />
+                        <span>Overview</span>
+                    </button>
+                    <button class="main-tab-item main-tab-item-active">
+                        <span>
+                            <img src="./assets/icons/activity.svg" class="repo-svg" alt="repositories_icon" />
+                            <b>Repositories</b>
+                            <span class="repos">23</span>
+                        </span>
+                    </button>
+                    <button class="main-tab-item">
+                        <img src="./assets/icons/projects.svg" alt="projects icon" />
+                        <span>Projects</span>
+                    </button>
+                    <button class="main-tab-item">
+                        <img src="./assets/icons/packages.svg" alt="packages icon" />
+                        <span>Packages</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <main class="container">
+        <div class="main-content">
+
+            <section class="left-menu">
+                <div class="profile">
+                    <div class="profile-image-container">
+                        <img id="userAvatar"
+                            src="https://avatars.githubusercontent.com/u/45228014?s=400&u=c99ed6a00b8346b100d6d69d7f00b5ad1c34f0c1&v=4"
+                            alt="avatar" />
+                    </div>
+                    <div class="names-username">
+                        <p id="name" class="profile-name">{{ user.name }}</p>
+                        <p id="username" class="profile-username">{{ user.login }}</p>
+                    </div>
+                </div>
+                <p id="bio" class="bio">{{ user.bio }}</p>
+                <button class="edit-profile-btn">Edit profile</button>
+
+                <div class="user-stat">
+                    <a href="#" class="followers">
+                        <i class="fas fa-users"></i>
+                        <span class="text-bold text-gray-dark">{{ user.followers }}</span>
+                        Followers </a>.
+                    <a href="#" class="followers">
+                        <span class="text-bold text-gray-dark">{{ user.following }}</span>
+                        Following </a>.
+
+                    <a href="#" class="followers">
+                        <i class="far fa-star"></i>
+                        <span class="text-bold text-gray-dark">{{ user.public_repos }}</span>
+                    </a>
+                </div>
+
+                <div class="social hide-mobile">
+                    <div>
+                        <i class="fas fa-warehouse"></i>
+                        <span class="company">{{ user.company }}</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="location">Nigeria</span>
+                    </div>
+                    <div><i class="fab fa-twitter"></i> {{ user.twitter_username }}</div>
+                </div>
+
+                <hr class="hr" />
+                <div class="highlight hide-mobile">
+                    <h2>Highlights</h2>
+                    <ul>
+                        <li>Arctic Code Vault Contributor</li>
+                    </ul>
+                </div>
+            </section>
+            <div class="tabs-nav-wrapper hide-desktop">
+                <nav class="tabs-nav">
+                    <div class="main-tabs">
+                        <button class="main-tab-item">
+                            <span>Overview</span>
+                        </button>
+                        <button class="main-tab-item main-tab-item-active">
+                            <span>Repositories</span>
+                        </button>
+                        <button class="main-tab-item">
+                            <span>Projects</span>
+                        </button>
+                        <button class="main-tab-item">
+                            <span>Packages</span>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+            <section id="repoList" class="repo-list">
+                <div class="repo-search-container">
+                    <label><input v-model="search" class="repo-search-input" type="text"
+                            placeholder="Find a repository..." /></label>
+
+                    <div class="btn-wrapper">
+                        <span class="dropdown">
+                            <button>Type</button>
+                            <label>
+                                <input type="checkbox" />
+                                <ul>
+                                    <div>
+                                        <li>All</li>
+                                        <li class="divider"></li>
+                                        <li>public</li>
+                                        <li class="divider"></li>
+                                        <li> private</li>
+                                        <li class="divider"></li>
+                                        <li> sources</li>
+                                        <li class="divider"></li>
+                                        <li> forks </li>
+                                        <li class="divider"></li>
+                                        <li>archieved </li>
+                                        <li class="divider"></li>
+                                        <li>mirrors</li>
+                                        <li class="divider"></li>
+                                    </div>
+                                </ul>
+                            </label>
+                        </span>
+                        <span class="dropdown">
+                            <button>Language</button>
+                            <label>
+                                <input type="checkbox" />
+                                <ul>
+                                    <div>
+                                        <li>All</li>
+                                        <li class="divider"></li>
+                                        <li>Vue</li>
+                                        <li class="divider"></li>
+                                        <li> HTML</li>
+                                        <li class="divider"></li>
+                                        <li> JavaScript</li>
+                                        <li class="divider"></li>
+                                        <li> SCSS </li>
+                                        <li class="divider"></li>
+                                        <li>Objective-C </li>
+                                        <li class="divider"></li>
+                                        <li>TypeScript</li>
+                                        <li class="divider"></li>
+                                        <li>CSS</li>
+                                        <li class="divider"></li>
+                                        <li>Dart</li>
+                                        <li class="divider"></li>
+                                    </div>
+                                </ul>
+                            </label>
+                        </span>
+                        <span class="dropdown">
+                            <button>Sort</button>
+                            <label>
+                                <input type="checkbox" />
+                                <ul>
+                                    <div>
+                                        <li>Last updated</li>
+                                        <li class="divider"></li>
+                                        <li> Stars</li>
+                                        <li class="divider"></li>
+                                    </div>
+                                </ul>
+                            </label>
+                        </span>
+                        <button class="new-btn"><svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" height="16"
+                                fill="#f7f7f7" width="16" class="octicon octicon-repo">
+                                <path fill-rule="evenodd"
+                                    d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z">
+                                </path>
+                            </svg>New</button>
+                    </div>
+                </div>
+
+                <!-- <div class="repo" v-for="(item, i) in filteredItems" :key="i">
+                <div class="repo-main-data">
+                    <div class="repo-data">
+                        <a :href="item.html_url" target="_blank" class="repo-name">{{ item.name }}
+                            <span v-if="item.private" class="private">Private</span>
+                        </a>
+                        <p class="repo-description">
+                            {{ item.description }}
+                        </p>
+                    </div>
+                    <button class="star-button" @click="getdata(item)">
+                        <img src="icons/star.svg" alt="star icon" />
+                        <span>Star</span>
+                    </button>
+                </div> -->
+                <!-- <div class="repo-meta">
+                    <div class="repo-language">
+                        <span style="background: red" class="repo-language-color"></span>
+                        <span class="repo-language-text">{{ item.language }}</span>
+                    </div>
+                    <div class="repo-stars">
+                        <img src="icons/star.svg" alt="star icon" />
+                        <span>{{ item.stargazers_count }}</span>
+                    </div>
+                    <div class="updated">
+                        <span>Updated on
+                            {{ $moment(item.updated_at, 'YYYYMMDD').fromNow() }}</span>
+                    </div>
+                </div> -->
+        </div>
+        </section>
+        </div>
+
+    </main>
+</body>
+
+</html>
