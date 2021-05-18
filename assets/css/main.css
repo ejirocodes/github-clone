@@ -41,6 +41,12 @@ a:hover {
 .d-flex {
   display: flex;
 }
+.align-cen {
+  align-items: center;
+}
+.just-cen {
+  justify-content: center;
+}
 
 .form-control,
 .form-select {
@@ -198,7 +204,7 @@ input::placeholder {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
   border: 1px solid rgba(27, 31, 35, 0.15);
-  padding: 6px 20px 6px 10px;
+  padding: 6px 28px 6px 16px;
   border-radius: 4px;
   display: inline-block;
   color: #24292e;
@@ -438,7 +444,8 @@ label {
 .highlight ul li {
   font-size: 14px;
 }
-.location {
+.location,
+#twitterUsername {
   margin-left: 6px;
 }
 .company {
@@ -548,7 +555,6 @@ label {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: rebeccapurple;
   overflow: hidden;
   margin-top: 10px;
   float: right;

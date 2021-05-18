@@ -114,8 +114,11 @@ ul {
 button {
   background: transparent;
   border: none;
+  font-family: inherit;
 }
-
+.hide {
+  visibility: hidden;
+}
 button:focus {
   outline: none;
 }
