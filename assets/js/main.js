@@ -22,11 +22,11 @@ const userEmail = document.querySelector('#email');
 const userWebsiteUrl = document.querySelector('#websiteUrl');
 const repo = document.querySelector('#repositories');
 
-const options = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'Content-Type',
-  Authorization: `bearer ${process.env.GH_ACCESS_TOKEN}`,
-};
+// const options = {
+//   'Access-Control-Allow-Origin': '*',
+//   'Access-Control-Allow-Headers': 'Content-Type',
+//   Authorization: `bearer ${process.env.GH_ACCESS_TOKEN}`,
+// };
 
 (async function getGithubUser() {
   const res = await fetch(baseUrl, {
@@ -34,7 +34,7 @@ const options = {
     headers: {
       'Content-Type': 'application/json',
       Accept: 'application/json',
-      Authorization: `bearer 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`,
+      Authorization: `bearer ${process.env.GH_ACCESS_TOKEN}`,
     },
     body: JSON.stringify({
       query: `{ viewer {     login

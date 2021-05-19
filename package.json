@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ejirocodes/github-clone#readme",
   "dependencies": {
-    "dotenv": "^9.0.2"
+    "dotenv": "^9.0.2",
+    "node-fetch": "^2.6.1"
   }
 }
