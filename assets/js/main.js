@@ -8,6 +8,8 @@ const baseUrl = 'https://api.github.com/graphql';
 // console.log(process.env);
 
 const avatarMain = document.querySelector('#userAvatar');
+const navAvatar = document.querySelector('#navAvatar');
+const repoNum = document.querySelector('#repoNum');
 const fullname = document.querySelector('#name');
 const username = document.querySelector('#username');
 const userBio = document.querySelector('#bio');
@@ -91,6 +93,8 @@ const options = {
   } = viewer;
 
   avatarMain.src = avatarUrl;
+  navAvatar.src = avatarUrl;
+  repoNum.textContent = repositories.nodes.length;
   fullname.textContent = name;
   username.textContent = login;
   userBio.textContent = bio;
