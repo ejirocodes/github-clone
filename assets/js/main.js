@@ -28,7 +28,7 @@ const repo = document.querySelector('#repositories');
     headers: {
       'Content-Type': 'application/json',
       Accept: 'application/json',
-      Authorization: `bearer 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`,
+      Authorization: `bearer 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`,
     },
     body: JSON.stringify({
       query: `{ viewer {     login
@@ -67,6 +67,7 @@ const repo = document.querySelector('#repositories');
               } }}`,
     }),
   });
+
   let {
     data: { viewer },
   } = await res.json();
